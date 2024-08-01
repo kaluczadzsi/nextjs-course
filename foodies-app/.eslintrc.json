@@ -4,6 +4,7 @@
     "@next/next/no-img-element": "off",
     "react/jsx-uses-react": 0,
     "react/react-in-jsx-scope": 0,
-    "source.organizeImports": true
+    "source.organizeImports": true,
+    "no-undef": "error"
   }
 }
