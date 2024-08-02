@@ -1,10 +1,22 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": ["next/core-web-vitals", "plugin:import/recommended"],
+  "plugins": ["import"],
   "rules": {
     "@next/next/no-img-element": "off",
-    "react/jsx-uses-react": 0,
-    "react/react-in-jsx-scope": 0,
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
     "source.organizeImports": true,
-    "no-undef": "error"
+    "no-undef": "error",
+    "import/named": "error",
+    "import/default": "error",
+    "import/namespace": "error",
+    "import/no-absolute-path": "error",
+    "import/no-cycle": "error",
+    "import/no-deprecated": "warn",
+    "import/no-extraneous-dependencies": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-named-as-default": "warn",
+    "import/no-named-as-default-member": "warn",
+    "import/no-unresolved": ["error", { "caseSensitive": false }]
   }
 }
