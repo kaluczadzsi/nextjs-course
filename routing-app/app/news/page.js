@@ -1,13 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { DUMMY_NEWS } from "@/dummy-news";
+import Link from "next/link";
 
-export default function page() {
-  const path = usePathname();
-  console.log(path);
+export default function Page() {
   return (
     <div>
       <h1>News Page</h1>
