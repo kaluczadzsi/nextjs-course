@@ -1,9 +1,6 @@
-import MainHeader from "@/components/main-header";
-
 export default function page() {
   return (
-    <div id="home">
-      <MainHeader />
+    <div id="page">
       <h1>Next.js Routing & Page Rendering</h1>
     </div>
   );

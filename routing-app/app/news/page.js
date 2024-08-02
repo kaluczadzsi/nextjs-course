@@ -1,7 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { DUMMY_NEWS } from "@/dummy-news";
 
 export default function page() {
   const path = usePathname();
@@ -9,16 +11,14 @@ export default function page() {
   return (
     <div>
       <h1>News Page</h1>
-      <ul>
-        <li>
-          <Link href={`news/first-news`}>First news item</Link>
-        </li>
-        <li>
-          <Link href={`news/second-news`}>Second news item</Link>
-        </li>
-        <li>
-          <Link href={`news/third-news`}>Third news item</Link>
-        </li>
+      <ul className="news-list">
+        {DUMMY_NEWS.map((newsItem) => (
+          <li key={newsItem.id}>
+            <Link href={`/news/${newsItem.slug}`}>
+              <img src={`/images/news/${newsItem.image}`} fill />
+            </Link>
+          </li>
+        ))}
       </ul>
     </div>
   );
